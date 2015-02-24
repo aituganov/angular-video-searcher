@@ -1,0 +1,14 @@
+<section class="jnv-result-no" ng-if="results.noResults" random-search="randomSearch"></section>
+<section class="result-container row"
+         ng-if="!results.noResults"
+         infinite-scroll="getNextResults()"
+         infinite-scroll-distance="3"
+         infinite-scroll-disabled="scrollIsDisabled()">
+
+	<div ng-repeat="res in results.data">
+		<div class="search-result col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			<div class="jnv-result-item" result-item="res"></div>
+		</div>
+	</div>
+	<div class="clearfix" ng-show="results.loading"></div>
+</section>

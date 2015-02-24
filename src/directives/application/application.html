@@ -1,0 +1,13 @@
+<div class="container">
+	<section class="on-error-mess col-md-8 col-md-offset-2" ng-if="results.search.error || results.suggestionsBlock.error">
+		<span class="icon jenova-icon icon-error"></span>
+		<h1 class="title">{{'ON_ERROR.OOPS' | translate}}</h1>
+		<h3 class="body">{{'ON_ERROR.MESS_BEGIN' | translate}} <a href="." class="refresh-page" ng-click="randomSearch()">{{'ON_ERROR.MESS_MIDDLE' | translate}}</a>{{'ON_ERROR.MESS_END' | translate}}</h3>
+	</section>
+	<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-hide="results.search.error || results.suggestionsBlock.error">
+		<div class="row">
+			<div class="jnv-search-bar" query="query" clear-query="clearQuery"></div>
+			<div class="jnv-result-list" random-search="clearQuery"></div>
+		</div>
+	</section>
+</div>

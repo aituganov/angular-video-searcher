@@ -1,0 +1,66 @@
+.jnv-suggestion-bar {
+  width: 100%;
+  height: @jenova-searchbar-height;
+  margin-top: @jenova-searchbar-height;
+  background-color: #333333;
+  margin-bottom: @jenova-std-padding-vertical;
+  white-space: nowrap;
+  overflow: hidden;
+
+  .scroll-button {
+    width: 156px;
+    height: @jenova-searchbar-height;
+    position: absolute;
+    color: @jenova-background-color;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 500;
+
+    .scroll-icon {
+      font-size: 50px;
+      line-height: @jenova-searchbar-height;
+    }
+  }
+  .scroll-button-left {
+    background-image: url("img/scroll-left.png");
+    background-size : cover;
+    left: 0;
+    .scroll-icon {
+      margin-left: -60px;
+    }
+  }
+  .scroll-button-right {
+    background-image: url("img/scroll-right.png");
+    background-size : cover;
+    right: 0;
+    .scroll-icon {
+      margin-right: -60px;
+    }
+  }
+
+  .spinner {
+    position: absolute;
+    color: white;
+    top: 105px;
+    left: 95%;
+    height: 30px;
+  }
+
+  .suggestions {
+    padding: 15px @jenova-std-padding-horizontal 40px @jenova-std-padding-horizontal;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .suggestion {
+    .title-container {;
+      color: #EDEAEA;
+      background-color: @jenova-pills-color;
+      cursor: pointer;
+      width: 165px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 2px;
+    }
+  }
+}

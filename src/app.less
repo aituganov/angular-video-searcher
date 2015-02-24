@@ -1,0 +1,62 @@
+@import "bower_components/bootstrap/less/bootstrap.less";
+
+@import "fonts/jenova/jenova";
+
+@import "directives/application/application";
+@import "directives/searchbar/searchbar";
+@import "directives/result/list/result-list";
+@import "directives/result/item/result-item";
+@import "directives/result/no/result-no";
+@import "directives/suggestionbar/suggestionbar";
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url(fonts/proximanova-light.otf);
+}
+
+@font-size-base: 18px;
+@font-family-base: 'Open Sans', 'lucida grande', 'Segoe UI', arial, verdana, 'lucida sans unicode', tahoma, sans-serif;
+
+@jenova-std-padding-horizontal: 32px;
+@jenova-std-padding-vertical: 28px;
+
+@jenova-searchbar-height: 80px;
+
+@jenova-background-color: #f6f6f6;
+@jenova-pills-color: #c1636f;
+@jenova-tooltip-color: #a9a9a9;
+@jenova-text-std-color:  #333333;
+
+@jenova-header-font-size: 36px;
+@jenova-std-font-size: 18px;
+
+body {
+  color: @jenova-text-std-color;
+  background-color: @jenova-background-color;
+
+  .ellipsis {
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
+}
+.container {
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    width: r;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1280px;
+  }
+}

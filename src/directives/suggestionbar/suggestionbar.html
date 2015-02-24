@@ -1,0 +1,14 @@
+<div us-spinner="{radius:4, width:2, length: 6}" class="clearfix spinner" ng-show="suggestions.loading"></div>
+<div class="suggestion-wrapper" ng-show="suggestions.data.length">
+	<div class="scroll-button scroll-button-left" ng-show="leftScrollAbility" ng-click="scrollLeft()">
+		<span class="scroll-icon jenova-icon icon-previous"></span>
+	</div>
+	<div class="scroll-button scroll-button-right" ng-show="rightScrollAbility" ng-click="scrollRight()">
+		<span class="scroll-icon jenova-icon icon-next"></span>
+	</div>
+	<ul class="suggestions list-inline">
+		<li class="suggestion" ng-repeat="suggestion in suggestions.data">
+			<div class="title-container ellipsis" ng-click="onSuggest(suggestion)"><span class="title">{{suggestion.word}}</span></div>
+		</li>
+	</ul>
+</div>

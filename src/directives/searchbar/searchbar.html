@@ -1,0 +1,28 @@
+<div class="search-bar">
+	<div class="random-search" ng-click="clearQuery()">
+		<span class="icon jenova-icon icon-shuffle"></span>
+		<span class="button">{{'RANDOM_TOOLTIP' | translate}}</span>
+	</div>
+	<div class="search-wrapper">
+		<div class="searchbar-container">
+			<div class="clear-button-container">
+				<span class="clear-button jenova-icon icon-cross" ng-show="query.length || appliedSuggestions.length" ng-click="clearSearchQuery()"></span>
+			</div>
+			<div class="search-input">
+				<input class="searchbar clearfix" placeholder="{{'SEARCH_TOOLTIP' | translate}}" ng-keypress="search($event)" ng-model="query" ng-change="suggest(true)" ng-click="suggest()"/>
+			</div>
+		</div>
+		<div class="suggestion-list dropdown">
+			<ul ng-show="showSuggestions" class="dropdown-menu">
+				<li class="suggestion" ng-repeat="suggestion in suggestions.data" ng-hide="suggestions.loading||suggestions.noResults">
+					<a href ng-click="applySuggestion(suggestion, true)"><span class="suggestion-title">{{suggestion.word}}</span></a>
+				</li>
+				<li class="no-results" ng-show="suggestions.noResults">
+					<a href><span>No results</span></a>
+				</li>
+				<li us-spinner="{radius:4, width:2, length: 6}" class="spinner" ng-show="suggestions.loading"></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="jnv-suggestion-bar" query="query" on-suggest="applySuggestion"></div>

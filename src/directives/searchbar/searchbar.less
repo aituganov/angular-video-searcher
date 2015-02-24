@@ -1,0 +1,72 @@
+.jnv-search-bar {
+  .search-bar {
+    padding: 0 @jenova-std-padding-horizontal;
+    margin-top: -1 * @jenova-searchbar-height;
+    position: fixed;
+    background-color: @jenova-background-color;
+    width: 100%;
+    max-width: 1280px;
+    z-index: 1000;
+  }
+  .searchbar-container {
+    font-size: @jenova-header-font-size;
+    overflow: hidden;
+    .clear-button-container {
+      float: right;
+      width: 73px;
+      height: 80px;
+      .clear-button {
+        cursor: pointer;
+        line-height: @jenova-searchbar-height;
+        font-size: 21px;
+        padding-left: 21px;
+        padding-right: 31px;
+        color: #a9a9a9;
+      }
+    }
+    .search-input {
+      overflow: hidden;
+      .searchbar {
+        height: @jenova-searchbar-height;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        &:focus {
+          outline: 0px;
+          -webkit-appearance: none;
+        }
+      }
+    }
+  }
+  .random-search {
+    font-size: @jenova-header-font-size;
+    cursor: pointer;
+    width: 335px;
+    height: @jenova-searchbar-height;
+    line-height: @jenova-searchbar-height;
+    float: right;
+    color: #a9a9a9;
+    &:before {
+      content: "|";
+      top: 24px;
+      color: transparent;
+      position: absolute;
+      border-left: 1px solid @jenova-tooltip-color;
+      height: 32px;
+    }
+    .icon {
+      position: relative;
+      top: -2px;
+      margin-left:  30px;
+      margin-right: 17px;
+    }
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+
+  .spinner {
+    height: 26px;
+  }
+}

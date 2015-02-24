@@ -1,0 +1,8 @@
+<a ng-href="{{::makeLinkToVideo(resultItem.link)}}" target="_blank">
+	<div class="preview-container">
+		<div class="duration"><span class="duration-value">{{::resultItem.duration | timeConverter}}<span></div>
+	</div>
+	<div class="title-container">
+		<span class="title" tooltip="{{resultItem.title}}" tooltip-placement="bottom">{{::resultItem.title | crop:45}}</span>
+	</div>
+</a>
